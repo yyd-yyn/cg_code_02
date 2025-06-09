@@ -1,8 +1,12 @@
-[gd_scene load_steps=21 format=3 uid="uid://dxsovimo8hppp"]
+[gd_scene load_steps=25 format=3 uid="uid://dxsovimo8hppp"]
 
 [ext_resource type="Texture2D" uid="uid://dfon07k8s6jhm" path="res://MeterGrid (1).png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://dt1faf1p2iw5c" path="res://character_body_3d.gd" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://0ij04bgu5en7" path="res://rigid_body_3d.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c74s3hua8xxlx" path="res://car.glb" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://bjdkc3enjfjv5" path="res://ampel_overhead.glb" id="5_5vw27"]
+[ext_resource type="PackedScene" uid="uid://j6sc17iguugl" path="res://ampel_pole.glb" id="6_kek77"]
+[ext_resource type="PackedScene" uid="uid://ciwe1t8sscvxx" path="res://dog_.glb" id="7_4c57u"]
 
 [sub_resource type="Environment" id="Environment_h2yge"]
 background_mode = 1
@@ -136,3 +140,15 @@ transform = Transform3D(1, 0, 0, 0, 0.999956, -0.00935483, 0, 0.00935483, 0.9999
 
 [node name="Camera3D" type="Camera3D" parent="Player/CameraRig"]
 transform = Transform3D(1, 0, 0, 0, 0.899703, 0.436503, 0, -0.436503, 0.899703, 0, 3.23399, 3.19863)
+
+[node name="car2" parent="." instance=ExtResource("4_272bh")]
+transform = Transform3D(0.283614, 0, 0.958939, 0, 1, 0, -0.958939, 0, 0.283614, 3.81218, 0.311539, -2.98838)
+
+[node name="ampel_overhead" parent="." instance=ExtResource("5_5vw27")]
+transform = Transform3D(-0.191409, 0, 0.98151, 0, 1, 0, -0.98151, 0, -0.191409, 4.66459, 0.174139, 0)
+
+[node name="ampel_pole" parent="." instance=ExtResource("6_kek77")]
+transform = Transform3D(0.510183, 0, -0.860066, 0, 1, 0, 0.860066, 0, 0.510183, -1.47774, 0, 2.85553)
+
+[node name="dog_" parent="." instance=ExtResource("7_4c57u")]
+transform = Transform3D(-0.673632, 0, 0.739067, 0, 1, 0, -0.739067, 0, -0.673632, -1.73422, -0.986926, -2.43604)
