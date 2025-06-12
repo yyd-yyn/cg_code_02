@@ -1,6 +1,6 @@
 extends Node3D
 
-var rotation_speed := 1.5 # degrees per frame
+var rotation_speed := 1.5
 var vertical_rotation := 0.0
 
 func _process(delta):
